@@ -115,13 +115,18 @@ for i in personajes:
 print("\nB:")
 max = 0
 max_nodo = list
+arbolito = grafo.kruskal()
+
 print(grafo.kruskal())
-for vertice in grafo.kruskal():
+
+for vertice in arbolito:
     for nodo in vertice.split(";"):
         value = nodo.split("-")
-        if value.__contains__("Yoda"):
+        if value.__contains__("Yoda"):  
             print("Contiene a Yoda.")
-        if int(value[2] > max):
-            max_nodo = value
+        if len(value) == 2:
+            if int(value[2] > max):
+                max_nodo = value
 
-print(f"La arista de valor máximo es {max_nodo[0]} y {max_nodo[1]} comparten {max_nodo[2]} episodios")
+print("\nC:")
+print(f"La arista de valor máximo es {value[0]} y con {value[1]} comparten {value[2]} episodios")
