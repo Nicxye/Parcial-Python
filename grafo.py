@@ -239,7 +239,7 @@ class Grafo():
                     else:
                         vertice_des = bosque.pop(destino)
                         vertice_ori = bosque.pop(origen)
-
+                    
                     if '-' not in vertice_ori and '-' not in vertice_des:
                         bosque.append(f'{vertice_ori}-{vertice_des}-{arista[0]}')
                     elif '-' not in vertice_des:

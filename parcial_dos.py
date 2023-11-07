@@ -124,9 +124,9 @@ for vertice in arbolito:
         value = nodo.split("-")
         if value.__contains__("Yoda"):  
             print("Contiene a Yoda.")
-        if len(value) == 2:
-            if int(value[2] > max):
+        if len(value) == 3:
+            if int(value[2]) > max:
                 max_nodo = value
 
 print("\nC:")
-print(f"La arista de valor máximo es {value[0]} y con {value[1]} comparten {value[2]} episodios")
+print(f"La arista de valor máximo es {max_nodo[0]} y con {max_nodo[1]} comparten {max_nodo[2]} episodios")
